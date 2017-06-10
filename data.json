@@ -1,0 +1,59 @@
+{
+  "dhls": [
+    {
+      "number": "dhl001",
+      "status": "delivered",
+      "date": "2017-01-23T08:25:43.511Z"
+    },
+    {
+      "number": "dhl002",
+      "status": "delivered",
+      "date": "2017-04-23T16:25:43.511Z"
+    },
+    {
+      "number": "dhl003",
+      "status": "not delivered",
+      "date": "2017-05-21T18:25:43.511Z"
+    }
+  ],
+  "bposts": [
+    {
+      "number": "bpost001",
+      "status": "delivered",
+      "date": "2017-05-21T18:25:43.511Z"
+    },
+    {
+      "number": "bpost002",
+      "status": "delivered",
+      "date": "2017-05-21T18:25:43.511Z"
+    },
+    {
+      "number": "bpost003",
+      "status": "not delivered",
+      "date": "2017-05-21T18:25:43.511Z"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "firstname": "admin",
+      "lastname": "admin",
+      "username": "admin",
+      "password": "password"
+    },
+    {
+      "firstName": "yan",
+      "lastName": "wang",
+      "username": "yw",
+      "password": "password",
+      "id": 10
+    },
+    {
+      "username": "yw",
+      "password": "password",
+      "firstName": "yan",
+      "lastName": "wang",
+      "id": "06c16521-263c-8ebd-95e0-5a12d96faf3d"
+    }
+  ]
+}

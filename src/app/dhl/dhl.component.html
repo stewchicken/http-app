@@ -1,0 +1,11 @@
+<h2>
+  Dhl Parcels
+</h2>
+
+<button (click)="getDhls()">Get all Dhls</button>
+<button (click)="goBack()">Back</button>
+<ul class="dhls">
+  <li (click)="onSelect(dhl)" *ngFor="let dhl of dhls">
+    <span class="badge"> DHL Pacrcel Number: <u> {{dhl.number}} </u> </span>
+  </li>
+</ul>

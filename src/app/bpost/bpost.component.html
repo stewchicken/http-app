@@ -1,0 +1,10 @@
+<h2>
+  Bpost Parcels
+</h2>
+<button (click)="goBack()">Back</button>
+<ul class="bposts">
+  <li (click)="onSelect(bpost)"*ngFor="let bpost of bposts">
+    <span class="badge">{{bpost.number}}</span>
+    {{bpost.status}}
+  </li>
+</ul>

@@ -1,0 +1,10 @@
+<h1> Query Parcels App {{currentTime|date:'yyyy-MM-dd HH:mm:ss'}}</h1>
+
+<nav>
+  <a routerLink="/dhl" routerLinkActive="active">DHL Parcels</a>
+  <a routerLink="/bpost" routerLinkActive="active">Bpost Parcels</a>
+  <a routerLink="/login" routerLinkActive="active">Login</a>
+  <a routerLink="/register" routerLinkActive="active">Register</a>
+</nav>
+<app-alert></app-alert>
+<router-outlet></router-outlet>
