@@ -17,7 +17,7 @@ export class AuthService {
   public get currentUser(): Observable<User> {
     return this.subject.asObservable();
   }
-  public login(username, password) {
+  public login(username, password): Observable<any> {
     return this.http.get(this.REMOTE_USER_URL + "?username=" + username)
       .map((response: Response) => {
         // login successful if there's a jwt token in the response
@@ -31,7 +31,6 @@ export class AuthService {
             return "LoggedIn Successfully";
           } else {
             console.log("throw login failed Errror **");
-            //throw Observable.throw(response);
             throw Observable.throw(new Error("login failed error "));
           }
         } else {
@@ -39,18 +38,6 @@ export class AuthService {
           throw Observable.throw(new Error("login failed error "));
         }
       });
-    /*
-    map((response: Response) => response.json()).subscribe(
-    data => {
-      let user = data[0];
-      if (user.name == username && user.password == password) {
-        localStorage.setItem("currentUser", JSON.stringify(user));
-      }
-    },
-    error => {
-      console.log("##### user register error ###### " + error);
-    });;
-    */
   }
 
   logout() {
