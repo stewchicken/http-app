@@ -7,12 +7,13 @@ import { DhldetailComponent } from "app/dhl/dhldetail.component";
 import { BpostdetailComponent } from "app/bpost/bpostdetail.component";
 import { UserloginComponent } from './user/userlogin.component';
 import { UserregisterComponent } from './user/userregister.component';
+import {AuthGuard} from "app/auth.guard";
 
 const routes: Routes = [
     { path: 'dhl', component: DhlComponent },
     { path: 'bpost', component: BpostComponent },
     { path: 'dhl/:id', component: DhldetailComponent },
-    { path: 'bpost/:id', component: BpostdetailComponent },
+    { path: 'bpost/:id', component: BpostdetailComponent,canActivate: [AuthGuard] },
     { path: 'login', component: UserloginComponent },
     { path: 'register', component: UserregisterComponent },
 ];
