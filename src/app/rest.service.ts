@@ -14,7 +14,7 @@ export class RestService {
   REMOTE_PARCEL_BPOST_URL = "http://localhost:3000/bposts";
   constructor(private http: Http) { }
 
- 
+
   getDHL(id): Observable<any> {
 
     return this.http.get(this.REMOTE_PARCEL_DHL_URL + "?number=" + id).
@@ -40,9 +40,14 @@ export class RestService {
 
   }
 
+  getUser(user: User): Observable<any> {
+    return this.http.get(this.REMOTE_USER_URL + "?username=" + user.username).
+      map((response: Response) => response.json());
+  }
+
   postUser(user: User): Observable<any> {
-    user.id=UUID.UUID();
-    console.log("postUser is called "+user);
+    user.id = UUID.UUID();
+    console.log("postUser is called " + user);
     return this.http.post(this.REMOTE_USER_URL, user)
       .map((response: Response) => response.json());
   }

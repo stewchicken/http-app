@@ -3,8 +3,10 @@
 <nav>
   <a routerLink="/dhl" routerLinkActive="active">DHL Parcels</a>
   <a routerLink="/bpost" routerLinkActive="active">Bpost Parcels</a>
-  <a routerLink="/login" routerLinkActive="active">Login</a>
-  <a routerLink="/register" routerLinkActive="active">Register</a>
+  <a *ngIf="!currentUser?.username" routerLink="/login" routerLinkActive="active">Login</a>
+  <a *ngIf="!currentUser?.username" routerLink="/register" routerLinkActive="active">Register</a>
+  <a *ngIf="currentUser?.username" href="javascript:void(0);" (click)="doLogout()">LogOut</a>
+
 </nav>
 <app-alert></app-alert>
 <router-outlet></router-outlet>

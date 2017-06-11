@@ -16,6 +16,7 @@ import { AlertComponent } from './alert/alert.component';
 // import services
 import { RestService } from "app/rest.service";
 import { AlertService} from "app/alert.service";
+import { AuthService } from "app/auth.service";
 
 
 @NgModule({
@@ -35,7 +36,7 @@ import { AlertService} from "app/alert.service";
     ToastModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [RestService,AlertService],
+  providers: [RestService,AlertService,AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

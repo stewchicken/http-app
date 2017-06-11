@@ -41,13 +41,7 @@
       "username": "admin",
       "password": "password"
     },
-    {
-      "firstName": "yan",
-      "lastName": "wang",
-      "username": "yw",
-      "password": "password",
-      "id": 10
-    },
+    
     {
       "username": "yw",
       "password": "password",

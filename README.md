@@ -21,7 +21,7 @@ ng g service rest --flat
 
 
 # add commit push
-git add .
+git add . --all
 git commit -a -m "commit message"
 git push
 
