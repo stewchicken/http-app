@@ -12,10 +12,11 @@ export class DhlComponent implements OnInit, OnDestroy {
   dhls: Parcel[];
   navigated=false;//true if navigated here
   constructor(private restService: RestService, private router: Router) {
+    console.log("DhlComponent constructor is called");
   }
 
   ngOnInit() {
-    console.log("ngOnInit DHL is called ");
+    console.log("DhlComponent ngOnInit  is called ");
     this.restService.getDHLs().subscribe(
       (data: any) => {
         console.log("data ###### " + data);
