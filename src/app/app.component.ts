@@ -1,20 +1,25 @@
-import { Component, HostListener, ElementRef, Renderer, ViewContainerRef } from '@angular/core';
+import { Component, HostListener, ElementRef, Renderer, ViewContainerRef, OnDestroy } from '@angular/core';
 import { User } from "app/user/user";
 import 'rxjs/add/operator/merge';
 import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { AuthService } from "app/auth.service";
 import { ActivatedRoute, Router, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from "@angular/router";
+import { Subscription } from "rxjs/Subscription";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnDestroy {
+  ngOnDestroy(): void {
+    // unsubscribe to ensure no memory leaks
+    this.subscription.unsubscribe();
+  }
   title = 'Routing Apps';
   currentTime: Date = new Date();
   public currentUser: User;
-  public isLoggedIn:boolean;
+  public subscription: Subscription;
   private globalClickCallbackFn: Function;
   constructor(
     public elementRef: ElementRef,
@@ -38,10 +43,10 @@ export class AppComponent {
       console.log("Global Click Event Listener >" + event);
     });
     this.currentUser = JSON.parse(localStorage.getItem("currentUser"));
-    this.authenticationService.currentUser.subscribe(
+    this.subscription = this.authenticationService.currentUser.subscribe(
       data => {
         this.currentUser = data;
-        console.log("app component ngOnInit :"+this.currentUser.username);
+        console.log("app component ngOnInit :" + this.currentUser.username);
         let activatedRouteSnapshot: ActivatedRouteSnapshot = this.activatedRoute.snapshot;
         let routerState: RouterState = this.router.routerState;
         let routerStateSnapshot: RouterStateSnapshot = routerState.snapshot;
@@ -62,5 +67,7 @@ export class AppComponent {
   doLogout(): void {
     this.authenticationService.logout();
   }
+
+
 
 }
