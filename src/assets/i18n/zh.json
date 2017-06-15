@@ -1,0 +1,16 @@
+{
+    "app": {
+        "title": " 包裹查询App ",
+        "querydhl": "DHL 包裹",
+        "querybpost": "BPOST 包裹",
+        "login": "登入",
+        "register": "注册",
+        "cancel": "取消",
+        "logout": "登出",
+        "back": "返回",
+        "username": "用户名",
+        "password": "密码",
+        "firstname": "名",
+        "lastname": "姓"
+    }
+}

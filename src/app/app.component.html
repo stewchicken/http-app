@@ -1,12 +1,13 @@
 <h1> Query Parcels App {{currentTime|date:'yyyy-MM-dd HH:mm:ss'}}</h1>
 
 <nav>
-  <a routerLink="/dhl" routerLinkActive="active">DHL Parcels</a>
-  <a routerLink="/bpost" routerLinkActive="active">Bpost Parcels</a>
-  <a *ngIf="!currentUser?.username" routerLink="/login" routerLinkActive="active">Login</a>
-  <a *ngIf="!currentUser?.username" routerLink="/register" routerLinkActive="active">Register</a>
-  <a *ngIf="currentUser?.username" href="javascript:void(0);" (click)="doLogout()">LogOut</a>
-
+  <a routerLink="/dhl" routerLinkActive="active">{{'app.querydhl' | translate}}</a>
+  <a routerLink="/bpost" routerLinkActive="active">{{'app.querybpost' | translate}}</a>
+  <a *ngIf="!currentUser?.username" routerLink="/login" routerLinkActive="active">{{'app.login' | translate}}</a>
+  <a *ngIf="!currentUser?.username" routerLink="/register" routerLinkActive="active">{{'app.register' | translate}}</a>
+  <a *ngIf="currentUser?.username" href="javascript:void(0);" (click)="doLogout()">{{'app.logout' | translate}}</a>
+  <a href="javascript:void(0);" (click)="changeLang('zh')">中文</a>
+  <a href="javascript:void(0);" (click)="changeLang('en')">English</a>
 </nav>
 <app-alert></app-alert>
 <router-outlet></router-outlet>

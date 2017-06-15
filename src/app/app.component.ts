@@ -5,6 +5,7 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 import { AuthService } from "app/auth.service";
 import { ActivatedRoute, Router, ActivatedRouteSnapshot, RouterState, RouterStateSnapshot } from "@angular/router";
 import { Subscription } from "rxjs/Subscription";
+import { TranslateService } from "ng2-translate";
 
 @Component({
   selector: 'app-root',
@@ -25,6 +26,7 @@ export class AppComponent implements OnDestroy {
     public elementRef: ElementRef,
     public renderer: Renderer,
     public router: Router,
+    public translate: TranslateService,
     public activatedRoute: ActivatedRoute,
     public toastr: ToastsManager,
     public vcr: ViewContainerRef,
@@ -62,6 +64,18 @@ export class AppComponent implements OnDestroy {
       },
       error => console.error(error)
     );
+
+    this.translate.addLangs(["zh", "en"]);
+    this.translate.setDefaultLang('zh');
+
+    const browserLang = this.translate.getBrowserLang();
+    console.log("check browser language>" + browserLang);
+    this.translate.use(browserLang.match(/zh|en/) ? browserLang : 'zh');
+  }
+
+  changeLang(lang) :void {
+    console.log("changeLang: "+lang);
+    this.translate.use(lang);
   }
 
   doLogout(): void {

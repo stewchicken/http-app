@@ -1,0 +1,16 @@
+{
+    "app": {
+        "title":" Query Parcels App ",
+        "querydhl": "DHL Parcels",
+        "querybpost": "BPOST Parcels",
+        "login": "Login",
+        "register": "Register",
+        "cancel": "Cancel",
+        "logout": "Logout",
+        "back": "Back",
+        "username": "Username",
+        "password": "Password",
+        "firstname": "FIrstname",
+        "lastname": "Lastname"
+    }
+}

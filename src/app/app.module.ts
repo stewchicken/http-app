@@ -2,9 +2,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, Http } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ToastModule } from "ng2-toastr";
+import { TranslateModule, TranslateLoader, TranslateStaticLoader } from "ng2-translate";
+
 //import component
 import { AppComponent } from './app.component';
 import { routingComponents } from './app-routing.module';
@@ -15,9 +17,13 @@ import { UserregisterComponent } from './user/userregister.component';
 import { AlertComponent } from './alert/alert.component';
 // import services
 import { RestService } from "app/rest.service";
-import { AlertService} from "app/alert.service";
+import { AlertService } from "app/alert.service";
 import { AuthService } from "app/auth.service";
-import {AuthGuard} from "app/auth.guard";
+import { AuthGuard } from "app/auth.guard";
+
+export function createTranslateLoader(http: Http) {
+  return new TranslateStaticLoader(http, './assets/i18n', '.json');
+}
 
 
 @NgModule({
@@ -32,12 +38,17 @@ import {AuthGuard} from "app/auth.guard";
   ],
   imports: [
     BrowserModule,
-    HttpModule, 
+    HttpModule,
     FormsModule,
+    TranslateModule.forRoot({
+      provide: TranslateLoader,
+      useFactory: (createTranslateLoader),
+      deps: [Http]
+    }),
     ToastModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [AuthGuard,RestService,AlertService,AuthService],
+  providers: [AuthGuard, RestService, AlertService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

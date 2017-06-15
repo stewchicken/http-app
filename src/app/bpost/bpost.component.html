@@ -1,10 +1,9 @@
 <h2>
-  Bpost Parcels
+  {{'app.querybpost' | translate}}
 </h2>
-<button (click)="goBack()">Back</button>
+<button (click)="goBack()"> {{'app.back' | translate}}</button>
 <ul class="bposts">
-  <li (click)="onSelect(bpost)"*ngFor="let bpost of bposts">
-    <span class="badge">{{bpost.number}}</span>
-    {{bpost.status}}
+  <li (click)="onSelect(bpost)" *ngFor="let bpost of bposts">
+    <span class="badge">{{bpost.number}}</span> {{bpost.status}}
   </li>
 </ul>

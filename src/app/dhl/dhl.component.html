@@ -1,9 +1,9 @@
 <h2>
-  Dhl Parcels
+  {{'app.querydhl' | translate}}
 </h2>
 
-<button (click)="getDhls()">Get all Dhls</button>
-<button (click)="goBack()">Back</button>
+<button (click)="getDhls()">{{'app.querydhl' | translate}}</button>
+<button (click)="goBack()">{{'app.back' | translate}}</button>
 <ul class="dhls">
   <li (click)="onSelect(dhl)" *ngFor="let dhl of dhls">
     <span class="badge"> DHL Pacrcel Number: <u> {{dhl.number}} </u> </span>
