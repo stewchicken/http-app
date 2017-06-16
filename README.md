@@ -15,10 +15,6 @@ json-server data.json
 ```
 ng serve , go to http://localhost:4200
 ```
-###Start Mock Backend REST by below command
-```
-json-server data.json
-```
 ###List DHL Parcels 
 
 ![dhllist](images/dhllist.png)
