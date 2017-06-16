@@ -11,6 +11,7 @@ npm install
 ```
 json-server data.json
 ```
+![json-server](images/json-server.png)
 # start project - frontend
 ```
 ng serve , go to http://localhost:4200
