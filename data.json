@@ -41,13 +41,19 @@
       "username": "admin",
       "password": "password"
     },
-    
     {
       "username": "yw",
       "password": "password",
       "firstName": "yan",
       "lastName": "wang",
       "id": "06c16521-263c-8ebd-95e0-5a12d96faf3d"
+    },
+    {
+      "firstName": "blah",
+      "lastName": "blah",
+      "username": "bb",
+      "password": "1234",
+      "id": "af531be6-f57a-10a6-9fa7-685b505c3d4a"
     }
   ]
 }
