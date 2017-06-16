@@ -1,3 +1,5 @@
+# Short Intro
+It is a NG4 demo with CRUD + Authorization + i18N
 
 # install angular cli 1.1.1 , you need to have node >6, npm>3.10
 ```
