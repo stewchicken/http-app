@@ -66,11 +66,11 @@ export class AppComponent implements OnDestroy {
     );
 
     this.translate.addLangs(["zh", "en"]);
-    this.translate.setDefaultLang('zh');
+    this.translate.setDefaultLang('en');
 
     const browserLang = this.translate.getBrowserLang();
     console.log("check browser language>" + browserLang);
-    this.translate.use(browserLang.match(/zh|en/) ? browserLang : 'zh');
+    this.translate.use(browserLang.match(/zh|en/) ? browserLang : 'en');
   }
 
   changeLang(lang) :void {
@@ -81,7 +81,4 @@ export class AppComponent implements OnDestroy {
   doLogout(): void {
     this.authenticationService.logout();
   }
-
-
-
 }

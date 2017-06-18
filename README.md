@@ -1,5 +1,5 @@
 # Short Intro
-It is a NG4 demo(Parcel Query App) with CRUD + Authorization + i18N
+It is a NG4 demo(Parcel Query App) with CRUD + Authorization  + i18N + Chart
 
 # install angular cli 1.1.1 , you need to have node >6, npm>3.10
 ```
@@ -18,6 +18,9 @@ json-server data.json
 ```
 ng serve , go to http://localhost:4200
 ```
+# display chart
+![chart](images/chart.png)
+
 # list DHL Parcels 
 
 ![dhllist](images/dhllist.png)

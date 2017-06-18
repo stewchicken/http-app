@@ -1,8 +1,10 @@
 {
     "app": {
-        "title":" Query Parcels App ",
+        "title": " Query Parcels App ",
         "querydhl": "DHL Parcels",
         "querybpost": "BPOST Parcels",
+        "chart": "Chart",
+        "mockdata":"Using Mockdata",
         "login": "Login",
         "register": "Register",
         "cancel": "Cancel",

@@ -3,6 +3,8 @@
         "title": " 包裹查询App ",
         "querydhl": "DHL 包裹",
         "querybpost": "BPOST 包裹",
+        "chart": "图表",
+        "mockdata":"测试数据",
         "login": "登入",
         "register": "注册",
         "cancel": "取消",

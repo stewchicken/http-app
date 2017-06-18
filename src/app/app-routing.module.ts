@@ -7,13 +7,17 @@ import { DhldetailComponent } from "app/dhl/dhldetail.component";
 import { BpostdetailComponent } from "app/bpost/bpostdetail.component";
 import { UserloginComponent } from './user/userlogin.component';
 import { UserregisterComponent } from './user/userregister.component';
-import {AuthGuard} from "app/auth.guard";
+import { AuthGuard } from "app/auth.guard";
 
 const routes: Routes = [
     { path: 'dhl', component: DhlComponent },
     { path: 'bpost', component: BpostComponent },
     { path: 'dhl/:id', component: DhldetailComponent },
-    { path: 'bpost/:id', component: BpostdetailComponent,canActivate: [AuthGuard] },
+    { path: 'bpost/:id', component: BpostdetailComponent, canActivate: [AuthGuard] },
+    {
+        path: 'chart',
+        loadChildren: './chart/chart.module#ChartModule'
+    },
     { path: 'login', component: UserloginComponent },
     { path: 'register', component: UserregisterComponent },
 ];
@@ -28,6 +32,6 @@ const routes: Routes = [
 })
 export class AppRoutingModule {
 
- }
-export const routingComponents = [DhlComponent, BpostComponent,DhldetailComponent,
-BpostdetailComponent,UserloginComponent,UserregisterComponent]
+}
+export const routingComponents = [DhlComponent, BpostComponent, DhldetailComponent,
+    BpostdetailComponent, UserloginComponent, UserregisterComponent]

@@ -1,5 +1,6 @@
 //import modules
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, Http } from '@angular/http';
@@ -15,11 +16,13 @@ import { BpostdetailComponent } from './bpost/bpostdetail.component';
 import { UserloginComponent } from './user/userlogin.component';
 import { UserregisterComponent } from './user/userregister.component';
 import { AlertComponent } from './alert/alert.component';
+
 // import services
 import { RestService } from "app/rest.service";
 import { AlertService } from "app/alert.service";
 import { AuthService } from "app/auth.service";
 import { AuthGuard } from "app/auth.guard";
+import { ChartComponent } from "app/chart/chart.component";
 
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
@@ -34,10 +37,11 @@ export function createTranslateLoader(http: Http) {
     BpostdetailComponent,
     UserloginComponent,
     UserregisterComponent,
-    AlertComponent
+    AlertComponent,
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpModule,
     FormsModule,
     TranslateModule.forRoot({

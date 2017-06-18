@@ -27,7 +27,6 @@ export class UserregisterComponent implements OnInit {
 
   register() {
     this.loading = true;
-
     this.restService.getUser(this.model).subscribe(
       data => {
         if (data.length > 0) {
@@ -48,14 +47,8 @@ export class UserregisterComponent implements OnInit {
               this.alertService.error(error);
               this.loading = false;
             });
-
         }
-
       }
     )
-
-
-
   }
-
 }
