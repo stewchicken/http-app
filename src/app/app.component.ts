@@ -17,7 +17,6 @@ export class AppComponent implements OnDestroy {
     // unsubscribe to ensure no memory leaks
     this.subscription.unsubscribe();
   }
-  title = 'Routing Apps';
   currentTime: Date = new Date();
   public currentUser: User;
   public subscription: Subscription;
