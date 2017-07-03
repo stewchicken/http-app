@@ -1,6 +1,10 @@
 # Short Intro
 It is a NG4 demo(Parcel Query App) with CRUD + Authorization  + i18N + Chart
 
+# demo for query , register, login, chart, i18n, etc
+![demo](images/queryparceldemo.gif)
+
+
 # install angular cli 1.1.1 , you need to have node >6, npm>3.10
 ```
 npm install -g @angular/cli@1.1.1

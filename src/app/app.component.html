@@ -3,7 +3,7 @@
 <nav>
   <a routerLink="/dhl" routerLinkActive="active">{{'app.querydhl' | translate}}</a>
   <a routerLink="/bpost" routerLinkActive="active">{{'app.querybpost' | translate}}</a>
-   <a routerLink="/chart" routerLinkActive="active">{{'app.chart' | translate}}</a>
+  <a routerLink="/chart" routerLinkActive="active">{{'app.chart' | translate}}</a>
   <a *ngIf="!currentUser?.username" routerLink="/login" routerLinkActive="active">{{'app.login' | translate}}</a>
   <a *ngIf="!currentUser?.username" routerLink="/register" routerLinkActive="active">{{'app.register' | translate}}</a>
   <a *ngIf="currentUser?.username" href="javascript:void(0);" (click)="doLogout()">{{'app.logout' | translate}}</a>
