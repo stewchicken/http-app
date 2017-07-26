@@ -1,12 +1,22 @@
 <h2>
- {{'app.querydhl' | translate}}
+    {{'app.querydhl' | translate}}
 </h2>
 <button (click)="goBack()">{{'app.back' | translate}}</button>
 <br>
-<label>
-{{dhl?.number}}
-</label>
-<br>
-<label>{{dhl?.status}}</label>
-<br>
-<label>{{dhl?.date|date: 'dd/MM/yyyy'}}</label>
+<div class="ui-g">
+    <div class="ui-g-1">
+        <label>
+           {{dhl?.number}}
+        </label>
+    </div>
+    <div class="ui-g-1">
+        <label>
+            {{dhl?.status}}
+        </label>
+    </div>
+    <div class="ui-g-3">
+        <label>
+            {{dhl?.date|date: 'dd/MM/yyyy'}}
+        </label>
+    </div>
+</div>

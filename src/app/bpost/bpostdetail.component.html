@@ -3,11 +3,21 @@
 </h2>
 <button (click)="goBack()"> {{'app.back' | translate}}</button>
 <br>
-<label>
-{{bpost?.number}}
-</label>
-<br>
-<label>
-{{bpost?.status}}
-</label>
-<br> <label>{{bpost?.date|date: 'dd/MM/yyyy'}}</label>
+
+<div class="ui-g">
+    <div class="ui-g-1">
+        <label>
+           {{bpost?.number}}
+        </label>
+    </div>
+    <div class="ui-g-1">
+        <label>
+            {{bpost?.status}}
+        </label>
+    </div>
+    <div class="ui-g-3">
+        <label>
+            {{bpost?.date|date: 'dd/MM/yyyy'}}
+        </label>
+    </div>
+</div>

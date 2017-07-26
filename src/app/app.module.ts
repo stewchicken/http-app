@@ -24,6 +24,9 @@ import { AuthService } from "app/auth.service";
 import { AuthGuard } from "app/auth.guard";
 import { ChartComponent } from "app/chart/chart.component";
 
+//import module for primeng 
+import {TabViewModule} from 'primeng/primeng';
+
 export function createTranslateLoader(http: Http) {
   return new TranslateStaticLoader(http, './assets/i18n', '.json');
 }
@@ -44,6 +47,7 @@ export function createTranslateLoader(http: Http) {
     BrowserAnimationsModule,
     HttpModule,
     FormsModule,
+    TabViewModule,
     TranslateModule.forRoot({
       provide: TranslateLoader,
       useFactory: (createTranslateLoader),
